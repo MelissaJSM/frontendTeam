@@ -1,0 +1,192 @@
+@charset "UTF-8";
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+#orderForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 250px;
+}
+
+#orderBookCheck {
+  font-size: 30px;
+}
+
+p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#order_chk {
+  width: 900px;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+#order_table {
+  width: 800px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+#order_chk, #order_table, td, th {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px;
+}
+
+img:not(#secondBar img, #topBar img) {
+  width: 100px;
+  height: 120px;
+}
+
+#total {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#day_box {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 900px;
+  height: 150px;
+  background-color: #F8F8F8;
+  border: solid 1px #D8D8D8;
+  color: black; /* 텍스트 색상 추가 */
+}
+
+#day_box p {
+  color: black; /* 텍스트 색상 추가 */
+}
+
+.day {
+  color: black; /* 버튼 텍스트 색상 추가 */
+  background-color: white;
+  border: 1px solid #228B22;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.day:hover {
+  background-color: #e0e0e0;
+}
+
+input[type="text"], input[type="number"] {
+  padding: 10px;
+  border: 1px solid #228B22;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  height: 15px;
+}
+
+input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+#order_table td:nth-child(2) {
+  text-align: left;
+}
+
+.address {
+  text-align: left;
+}
+
+.address>input[type="text"] {
+  width: 400px;
+}
+
+#info_box {
+  background-color: #ffffdb;
+  width: 880px;
+  height: 400px;
+  padding: 10px;
+  border-radius: 25px;
+  margin: 0 auto;
+}
+
+#pay_box {
+  width: 830px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.pay {
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #228B22;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin-right: -1px;
+  font-size: 15px;
+  line-height: 50px;
+}
+
+.pay.clicked {
+  background-color: #228B22;
+  color: white;
+}
+
+.card_num {
+  width: 50px;
+}
+
+.card {
+  display: none;
+  margin-top: 10px;
+}
+
+.card.show {
+  display: block;
+}
+
+.inline {
+  display: flex;
+  align-items: center;
+}
+
+.inline p {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.inline input[type="number"] {
+  padding: 10px;
+  border: 1px solid #B1B1B1;
+  border-radius: 0px;
+  font-size: 12px;
+  height: 12px;
+  margin-right: 5px;
+}
+
+#card_form {
+  padding: 30px;
+}
+
+.inline input[type="number"]:focus {
+  border-color: #007bff;
+}

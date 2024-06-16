@@ -1,0 +1,102 @@
+<!doctype html>
+<html class="en-US" lang="">
+
+<head>
+<meta charset="utf-8">
+<title>BOOKNEST 로그인</title>
+
+<!--  css 로드-->
+<link rel="stylesheet" href="css/login/login.css">
+<link rel="stylesheet" href="css/index/footer.css">
+<script src="js/login/login.js"></script>
+
+<!--자바스크립트 로드 ///이게 있으면 제 js가 작동을 안해서 주석 처리해뒀어요-->
+<!--  자바스크립트가 외부파일로 되어있을때 onload 처리 방식-->
+<!-- <script type="text/javascript">
+	window.onload = function() {
+		let header = document.createElement('script');
+		header.src = '../js/main/header.js';
+		document.head.appendChild(header);
+
+	}
+</script> -->
+<script src="js/index/footer.js"></script>
+</head>
+
+
+<body>
+
+	<!--메인 영역-->
+	<main class="container">
+		<header class="logo">
+			<img src="img/index/titleLogo.png">
+		</header>
+		<section>
+			<form id ="loginForm"class="login-form" action="#" method="post">
+				<div class="input-group">
+					<label for="id"></label>
+					<input type="text" id="id" name="username" placeholder="아이디를 입력해 주세요.">
+					  <span class="error-message" id="idError"></span>
+				</div>
+
+				<div class="input-group">
+					<label for="password"></label>
+					 <input type="password" id="password" name="password" placeholder="비밀번호를 입력해 주세요.">
+					  <span class="error-message" id="passwordError"></span>
+				</div>
+				<button type="submit">로그인</button>
+				<div class="options">
+					<input type="checkbox" id="save-id" checked> <label for="save-id" >아이디 저장</label>
+					<nav class="links">
+						<a href="#">아이디 찾기</a> <span> | </span> <a href="#">비밀번호 찾기</a>
+					</nav>
+				</div>
+			</form>
+		</section>
+
+		<section class="sns-login">
+			<p>개인정보 보호를 위해 공용 PC에서 사용 시 SNS계정의 로그아웃 상태를 꼭 확인해 주세요.</p>
+			<div class="sns-icons">
+				<a href="#"><img src="img/login/naver.png"></a> <a href="#"><img
+					src="img/login/kakao.png"></a> <a href="#"><img
+					src="img/login/google.png"></a>
+			</div>
+		</section>
+		<section class="buttons">
+			<button type="button" onclick="location.href='join.html'">회원가입</button>
+			<button type="button" onclick="location.href='#'">비회원 주문조회</button>
+		</section>
+	</main>
+	<!--섹션 영역-->
+	<section>
+		<article></article>
+	</section>
+
+	<footer>
+
+    <footer>
+      <!--  회사 소개  -->
+      <div id="information">
+        북네스트
+        "© 2024 BookNest. All rights reserved."
+        "연락처: info@booknest.com"
+        "전화번호: 123-456-7890"
+      </div>
+      <!--  회사 연관 리스트 처리  -->
+      <div id="term">
+        <a class="termLine" href="javascript:termAlert()">회사소개</a>
+        <a class="termLine" href="javascript:termAlert()">인재채용</a>
+        <a class="termLine" href="javascript:termAlert()">제휴제안</a>
+        <a class="termLine" href="javascript:termAlert()">이용약관</a>
+        <a class="termLine" href="javascript:termAlert()">개인정보처리방침</a>
+        <a class="termLine" href="javascript:termAlert()">청소년보호정책</a>
+        <a href="#">북네스트 정책</a>
+      </div>
+    </footer>
+
+	</footer>
+
+
+</body>
+
+</html>

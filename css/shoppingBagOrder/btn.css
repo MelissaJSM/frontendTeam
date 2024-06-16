@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+#shopping_table>tr:first-child {
+	background: #F8F8F8;
+}
+
+.order_btn, #order_btn, #del_btn, #open {
+	padding: 10px 40px;
+	font-size: 16px;
+	background-color: white;
+	color: 228B22;
+	border: #228B22 1px solid ;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+	margin: 10px;
+}
+
+.order_btn:hover, #order_btn:hover, #del_btn:hover, #open:hover {
+	background-color: #228B22;
+	color: white;
+}
+
+#open{
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px 20px 10px 20px;
+}
+
+.day {
+	padding: 10px 20px;
+	width: 160px;
+	height: 70px;
+	font-size: 16px;
+	text-align: center;
+	text-decoration: none;
+	border: #F2F2F2;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+}
+
+.day:hover, .selected {
+	background-color: #228B22;
+	font-weight: bolder;
+	color: #fff;
+}

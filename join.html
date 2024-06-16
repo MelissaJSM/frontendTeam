@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="no-js">
+		<head>
+			<meta charset="UTF-8">
+			<title>BOOKNEST 회원가입</title>
+			<link rel="icon"type="image/png" href="#"/>
+	    	 <link rel="stylesheet" href="css/join/join.css">
+	    	 <link rel="stylesheet" href="css/index/footer.css">
+
+			<script src="js/join/join.js"></script>
+			<script src="js/index/footer.js"></script>
+			<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+			 <!-- <script type="text/javascript">
+				window.onload = function() {
+				let header = document.createElement('script');
+				header.src = '../js/main/header.js';
+				document.head.appendChild(header);
+			}
+				</script> -->
+
+		</head>
+		<body>
+   <!-- join  -->
+    	<main>
+
+        <section>
+         <span> <img src="img/index/titleLogo.png" class="logo"></span>
+           	<form id="JoinForm"  name="JoinForm"  method="post"  action="insertMember.jsp">
+                <table>
+                    <tr>
+                        <td><label>이름</label></td>
+                        <td>
+                      		 <input type="text" id="name" name="name" class="text" size="20">
+
+                    		 <span class="error-message" id="nameError"></span>
+                    	</td>
+                    </tr>
+                    <tr>
+                        <td><label >아이디</label></td>
+                        <td>
+                        	<input type="text" id="id" class="text" size="20">
+                   			<input type="button" value="ID중복확인" class="overlapbtn" onClick="chkId()">
+                   			  <span class="error-message" id="idError"></span>
+                   		</td>
+                    </tr>
+                  <tr>
+					    <td><label>비밀번호</label></td>
+					    <td>
+					        <input type="password" id="password" class="text" size="20" placeholder=" (영문자+숫자+특수문자: 8자 이상)">
+					         <span class="error-message" id="passwordError"></span>
+					    </td>
+					</tr>
+                    <tr>
+                        <td><label >비밀번호 확인</label></td>
+                        <td>
+                        	<input type="password" id="confirmpassword" name="confirmpassword" >
+                        	<span class="error-message" id="confirmpasswordError"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="dob">생년월일</label></td>
+                        <td>
+                      	  <input type="date" id="dob" name="dob" class="text" >
+                          <span class="error-message" id="dobError"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="address1">주소</label></td>
+                        <td>
+                        	<input type="text" id="address1" name="address" class="text" >
+                            <input type="button" value=" 도로명주소검색" class="overlapbtn" onClick="searchAddress()">
+
+                          <label for="address2"></label><input type="text" id="address2" name="address" class="text" placeholder="상세주소 입력">
+                             <span class="error-message" id="addressError"></span>
+                           </td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone1">휴대폰 번호</label></td>
+                        <td>
+                            <input type="tel" id="phone1" name="phone1" class="text" value="010" maxlength="3" style="width: 50px;">
+                            - <input type="tel" id="phone2" name="phone2" class="text"  maxlength="4" style="width: 50px;">
+                            - <input type="tel" id="phone3" name="phone3" class="text"  maxlength="4" style="width: 50px;">
+							 <span class="error-message" id="phoneError"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label >이메일</label></td>
+                        <td>
+                            <input type="text" id="email" name="email" class="email" style="width: calc(50% - 10px);" > @
+
+                            <select name="emailDomain" >
+                                <option value="naver.com">naver.com</option>
+                                <option value="gmail.com">gmail.com</option>
+                                <option value="daum.net">daum.net</option>
+                            </select>
+                            <input type="button" value="email 중복확인"   onClick="chkEmail()" class="overlapbtn">
+                             <span class="error-message" id="emailError"></span>
+                          </td>
+                    </tr>
+                    <tr>
+				<td>이메일 수신여부</td>
+				<td>
+				<label><input type = "radio" name="emailRcv" value="yemail" >수신동의</label>
+				<label><input type = "radio" name="emailRcv" value=nemail>수신거부</label>
+				 <span class="error-message" id="emailRcvError"></span>
+				</td>
+			</tr>
+
+                    <tr>
+                        <td colspan="2"><button type="submit" class="submitbtn">가입하기</button></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </main>
+    <!-- join fin -->
+   <footer>
+
+     <footer>
+       <!--  회사 소개  -->
+       <div id="information">
+         북네스트
+         "© 2024 BookNest. All rights reserved."
+         "연락처: info@booknest.com"
+         "전화번호: 123-456-7890"
+       </div>
+       <!--  회사 연관 리스트 처리  -->
+       <div id="term">
+         <a class="termLine" href="javascript:termAlert()">회사소개</a>
+         <a class="termLine" href="javascript:termAlert()">인재채용</a>
+         <a class="termLine" href="javascript:termAlert()">제휴제안</a>
+         <a class="termLine" href="javascript:termAlert()">이용약관</a>
+         <a class="termLine" href="javascript:termAlert()">개인정보처리방침</a>
+         <a class="termLine" href="javascript:termAlert()">청소년보호정책</a>
+         <a href="#">북네스트 정책</a>
+       </div>
+     </footer>
+
+   </footer>
+
+</body>
+</html>

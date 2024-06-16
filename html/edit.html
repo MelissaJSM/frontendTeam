@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <link rel="stylesheet" href="../css/cscenter/style.css">
+    <link rel="stylesheet" href="../css/index/footer.css">
+  	<link rel="stylesheet" href="../css/index/header.css">
+  	<link rel="stylesheet" href="../css/index/nav.css">
+
+<!--자바스크립트 로드-->
+<!--  자바스크립트가 외부파일로 되어있을때 onload 처리 방식-->
+  <script type="text/javascript">
+    window.onload = function (){
+      let header = document.createElement('script');
+      header.src = '../js/communication/header.js';
+      document.head.appendChild(header);
+
+    }
+  </script>
+  <script src="../js/index/footer.js"></script>
+  <script src="../js/index/nav.js"></script>
+</head>
+<body>
+<!--  최상단 메뉴바 처리  -->
+<!--  이메일 전화번호 바로가기  -->
+<header>
+  <div id="topBar">
+    <a id="e-mail" href="mailto:info@booknest.com"><img src="../img/index/email.png" alt="Email Icon" /><span>info@booknest.com</span></a>
+    <div id="callLink">
+      <div id="callContainer">
+        <a id="call" href="tel:123-456-7890"><img src="../img/index/call.png"><span>123-456-7890</span></a>
+      </div>
+      <div id="socialContainer">
+        <a id="facebook" href="https://www.facebook.com" target="_blank"></a>
+        <a id="twitter" href="https://www.twitter.com" target="_blank"></a>
+        <a id="youtube" href="https://www.youtube.com" target="_blank"></a>
+
+      </div>
+    </div>
+    <!--  언어 선택 (하단 리스트 드롭다운 처리)  -->
+    <button id="lang">
+      <img id="langIcon" src="../img/index/korea.png" alt="Language Icon" />
+      <span>한국어</span> ▼
+    </button>
+    <div id="langDropdown">
+      <a href="#" data-lang="English" data-img="../img/index/america.png">English</a>
+      <a href="#" data-lang="한국어" data-img="../img/index/korea.png">한국어</a>
+      <a href="#" data-lang="日本語" data-img="../img/index/japan.png">日本語</a>
+      <a href="#" data-lang="中文" data-img="../img/index/china.png">中文</a>
+    </div>
+    <!--  로그인 회원가입  -->
+    <div id="user">
+      <a id="login" href="../login.html" onclick="openLoginWindow(event, 0)"><img src="../img/index/login.png"><span>로그인</span></a>
+      <a id="join" href="../join.html" onclick="openLoginWindow(event, 1)" ><img src="../img/index/join.png"><span>회원가입</span></a>
+    </div>
+  </div>
+  <!--  두번째 메뉴바  -->
+  <div id="secondBar">
+    <!--  메인 로고 바로가기  -->
+    <a id="mainShortcut" href="../index.html"><img src="../img/index/titleLogo.png"></a>
+    <!--  검색창 및 버튼  -->
+    <input id="searchInput" type="text" placeholder ="무엇이 필요하신가요?">
+    <!--  구매 바로가기  -->
+    <a id="searchButton" href="#"><img src="../img/index/search.png"></a>
+    <!--  장바구니 바로가기  -->
+    <a id="shoppingBag" href="../shoppingBag.html"><img src="../img/index/shoppingBak.png"></a>
+    <a id="buy" href="../orderPage.html"><img src="../img/index/buy.png"></a>
+  </div>
+</header>
+<!--네비게이션바 영역-->
+<nav>
+  <div id="listBox">
+    <!--  홈  -->
+    <a id="listHome" class="menu-item" href="../index.html">홈</a>
+    <!--  책 메뉴 (하단 리스트 드롭다운 처리)  -->
+    <div id="bookMenu" class="menu-item">
+      <span>책 메뉴</span>
+      <div id="bookMenuDropdown" class="dropdown-content">
+        <a href="../genre/literature.html">문학</a>
+        <a href="../genre/nonLliterature.html">비문학</a>
+        <a href="../genre/kiz.html">키즈</a>
+        <a href="../genre/practical.html">실용서</a>
+        <a href="../genre/magazine.html">매거진</a>
+        <a href="../genre/eBook.html">E-Book</a>
+        <a href="../genre/soundNovel.html">사운드 노벨</a>
+        <a href="../genre/etc.html">기타</a>
+      </div>
+    </div>
+    <!--  이달의 책  -->
+    <a id="monthBook" class="menu-item" href="../month.html">베스트셀러</a>
+    <!-- 스테디셀러 -->
+    <a id="steadySeller" class="menu-item" href="../steadySeller.html">스테디셀러</a>
+    <!--  마이페이지  -->
+    <a id="myPage" class="menu-item" href="../myPage.html">마이페이지</a>
+    <!--  고객센터  -->
+    <a id="callCenter" class="menu-item" href="../FAQ.html">고객센터</a>
+    <a id="community" class="menu-item" href="../list.html">게시판</a>
+  </div>
+</nav>
+<main>
+	<article>
+    <div class="board_wrap">
+        <div class="board_title">
+            <strong>커뮤니티</strong>
+        </div>
+        <div class="board_write_wrap">
+            <div class="board_write">
+            	<div class="category">
+                    <dl>
+                        <dt>분류</dt>
+                        <dd><select id="category" name="분류">
+							<option value="">선택</option>
+							<option value="review">[리뷰]</option>
+							<option value="productinquiry">[상품문의]</option>
+							<option value="deliveryinquiry">[배송문의]</option>
+							<option value="etc">[기타]</option>
+                        </select></dd>
+                    </dl>
+                </div>
+                <div class="title">
+                    <dl>
+                        <dt>제목</dt>
+                        <dd><input type="text" placeholder="제목 입력" value="어떤 코미디에는 웃을 수 없다."></dd>
+                    </dl>
+                </div>
+                <div class="info">
+                    <dl>
+                        <dt>작성자</dt>
+                        <dd><input type="text" placeholder="작성자 입력" value="손예진"></dd>
+                    </dl>
+                    <dl>
+                        <dt>비밀번호</dt>
+                        <dd><input type="password" placeholder="비밀번호 입력" value="1234"></dd>
+                    </dl>
+                </div>
+                <div class="content">
+                    <textarea placeholder="내용 입력">
+글 내용이 들어갑니다.
+글 내용이 들어갑니다.
+글 내용이 들어갑니다.
+글 내용이 들어갑니다.
+글 내용이 들어갑니다.
+글 내용이 들어갑니다.
+글 내용이 들어갑니다.</textarea>
+                </div>
+            </div>
+            <div class="bt_wrap">
+                <a href="view.html" class="on">저장</a>
+                <a href="view.html">취소</a>
+            </div>
+        </div>
+    </div>
+	</article>
+</main>
+</body>
+<footer>
+  <!--최하단 작업 영역-->
+<!--  회사 소개-->
+  <div id="information">
+    북네스트
+    "© 2024 BookNest. All rights reserved."
+    "연락처: info@booknest.com"
+    "전화번호: 123-456-7890"
+  </div>
+<!--  회사 연관 리스트 처리-->
+  <div id="term">
+    <a class="termLine" href="javascript:termAlert()">회사소개</a>
+    <a class="termLine" href="javascript:termAlert()">인재채용</a>
+    <a class="termLine" href="javascript:termAlert()">제휴제안</a>
+    <a class="termLine" href="javascript:termAlert()">이용약관</a>
+    <a class="termLine" href="javascript:termAlert()">개인정보처리방침</a>
+    <a class="termLine" href="javascript:termAlert()">청소년보호정책</a>
+    <a href="#">북네스트 정책</a>
+
+  </div>
+</footer>
+</html>

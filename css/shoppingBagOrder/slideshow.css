@@ -1,0 +1,42 @@
+#product_list {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.slideshow-container {
+  max-width: 1400px;
+  width: 100%;
+  position: relative;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slides img {
+  width: calc(100% / 4 - 20px);
+  height: auto;
+  margin-right: 10px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  color: white;
+  border: none;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
