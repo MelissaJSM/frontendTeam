@@ -17,5 +17,16 @@ footer{
   margin:5px;
   padding-right: 10px;
   border-right: 1px solid black;
+  text-decoration: none;
+  color: inherit;
+}
+.termLine:hover ,.termLineEnd:hover{
+  text-decoration: underline;
 }
 
+.termLineEnd{
+  margin:5px;
+  padding-right: 10px;
+  text-decoration: none;
+  color: inherit;
+}
